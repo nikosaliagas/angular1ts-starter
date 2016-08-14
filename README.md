@@ -1,4 +1,4 @@
-"Future proof" application skeleton
+AngularJs 1.5 TypeScript : Application Starter
 ===
  [![Build Status][travis-image]][travis-url]  [![Dependency Status][depstat-image]][depstat-url]
 
