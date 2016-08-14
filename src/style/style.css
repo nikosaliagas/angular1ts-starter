@@ -1,0 +1,38 @@
+h1 {
+  color: red !important; }
+
+.header {
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 10px; }
+  .header h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+    padding-bottom: 19px; }
+  .header h4 {
+    color: red; }
+
+.story-list li {
+  list-style: none; }
+
+.story-list {
+  overflow: hidden; }
+
+.story-list li {
+  text-decoration: none;
+  color: #000;
+  display: block;
+  height: 22em;
+  width: 24em;
+  background-color: #fdffff;
+  -moz-box-shadow: 5px 5px 7px #212121;
+  -webkit-box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
+  box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
+  margin: 1em;
+  float: left; }
+
+.story-list h3 {
+  padding-left: 0.4em; }
+
+.story-list div {
+  padding: 1em; }
