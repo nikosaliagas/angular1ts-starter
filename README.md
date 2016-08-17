@@ -17,6 +17,7 @@ Example contains simple implementation of Angular:
 ### Technology Stack
 -------
 * TypeScript 
+* Sass 
 * JSPM 
 * Karma 
 * Mocha 
