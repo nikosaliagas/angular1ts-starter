@@ -9,7 +9,7 @@ module.controller("DashboardCtrl", DashboardCtrl);
 // @ngInject
 module.config(($stateProvider:angular.ui.IStateProvider) => {
   $stateProvider.state("home", {
-    url: "/home",
+    url: "/",
     views: {
       application: {
         templateUrl: "src/module/dashboard/view/dashboard.html",

@@ -1,0 +1,22 @@
+<!-- <p>message : {{$ctrl.prop}}</p> -->
+<form novalidate name="formContact" ng-submit="$ctrl.traiter(formContact.$valid)">
+    <div class="container">
+        <div class="row ">
+            <div class="col-md-12">
+                Contactez-nous
+            </div>
+        </div>
+        <div class="row ">
+            <div class="form-group col-md-4">
+                <label class="label-form" for="nom">Nom <span>*</span></label>
+                <input type="text" name="nom" class="form-control" ng-model="$ctrl.contact.nom" required>
+                <p ng-show="formContact.nom.$error.required && $ctrl.submitted" class="help-block">Ce champ est requis.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <button type="submit" class="btn btn-vert"><i class="fa fa-cart-arrow-down"></i> Envoyer</button>
+            </div>
+        </div>
+    </div>
+</form>
