@@ -21,11 +21,13 @@ System.config({
   map: {
     "angular": "github:angular/bower-angular@1.5.5",
     "angular-mocks": "github:angular/bower-angular-mocks@1.5.5",
+    "angular-sanitize": "github:angular-sanitize/angular-sanitize.js",
     "angular-toastr": "github:Foxandxss/angular-toastr@1.7.0",
     "angular-ui-router": "github:angular-ui/ui-router@0.2.18",
     "bootstrap": "github:twbs/bootstrap@3.3.6",
     "clean-css": "npm:clean-css@3.4.12",
     "css": "github:systemjs/plugin-css@0.1.21",
+    "devextreme": "github:Devexpress/bower-devextreme-web@16.1.6",
     "ts": "github:frankwallis/plugin-typescript@4.0.5",
     "typescript": "npm:typescript@1.8.9",
     "github:Foxandxss/angular-toastr@1.7.0": {

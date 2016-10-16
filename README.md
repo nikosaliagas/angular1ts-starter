@@ -47,6 +47,12 @@ git clone https://github.com/b091/ts-skeleton.git
 npm install
 ```
 
+### Installing typings dependencies
+-------
+```
+typings install dt~devextreme --global --save-dev
+```
+
 ### Gulp tasks
 -------
 Serve application or documentation to browser

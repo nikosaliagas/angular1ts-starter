@@ -14,20 +14,34 @@ Component({
 export class FormulaireComponent {
     public contact: Contact;
     public submitted: boolean = false;
+    public buttonOptions: DevExpress.ui.dxButtonOptions;
 
-    constructor(private $q: ng.IQService, public contactService: ContactService) {}
+    // @ngInject
+    constructor(private toastr: Toastr, private $q: ng.IQService, public contactService: ContactService) {}
 
-    $onInit() {}
+    $onInit() {
+        var options: DevExpress.ui.dxButtonOptions;
+        options = {
+            text: 'Bouton Devextreme'
+        };
+        this.buttonOptions = options;
+    }
 
     public traiter(frm: boolean): boolean {
         if (!frm) {
             this.submitted = true;
+
+            this.toastr.warning("Corriger les erreurs", "Erreur de validation");
             return false;
         }
-        console.log("good");
+
+        this.toastr.success("value", "Validation ok");
+        // this.toastr.success("Nous vous contacterons prochainement", "Validation ok");
+
+        console.log("infos contact");
         console.log(this.contact);
 
-        this.contactService.getAll().then(function(datas) {
+        this.contactService.retournerTous().then(function(datas) {
             console.log("données");
             console.log(datas);
         });

@@ -2,20 +2,25 @@ import {
     HttpService
 }
 from "../../services/HttpService";
+
+import {
+    IService
+}
+from "../../services/IService";
+
 import IPromise = angular.IPromise;
 
-export class StoryService extends HttpService {
+export class StoryService implements IService {
+    moduleName: string = "stories";
+
     // @ngInject
-    constructor($http: ng.IHttpService) {
-
-        super($http);
-
-        this.moduleName = "stories";
+    constructor(private httpService: HttpService) {
+        this.httpService.moduleName = this.moduleName;
     }
 
     public getAll(): IPromise < any > {
         var config: any = {};
-        return this.useGetHandler(config);
+        return this.httpService.obtenir({});
     }
 
 }

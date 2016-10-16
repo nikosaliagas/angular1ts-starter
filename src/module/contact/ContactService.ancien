@@ -1,0 +1,28 @@
+import {
+    EndpointService
+}
+from "../../services/EndpointService";
+
+import IPromise = angular.IPromise;
+
+export class ContactService {
+    private moduleName: string = "stories";
+
+    // @ngInject
+    constructor(private endpointService: EndpointService,
+        private $http: ng.IHttpService) {}
+
+    public getAll(): IPromise < any > {
+        return this.$http
+            .get(this.endpointService.getUrl(this.moduleName))
+            .then((data: any) => this.handleResponse(data));
+    }
+
+    private handleResponse(response: any): any {
+        return response.data;
+    }
+}
+
+export interface Contact {
+    nom: string;
+}

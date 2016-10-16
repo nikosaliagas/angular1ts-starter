@@ -2,7 +2,6 @@ import {
     Story, StoryService
 }
 from "./../story/StoryService";
-
 export class DashboardCtrl {
 
     public title: string = "Bienvenue !";

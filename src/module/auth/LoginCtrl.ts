@@ -1,19 +1,22 @@
-import {FooBar} from "./FooBar";
+import {
+    FooBar
+}
+from "./FooBar";
 
 export class LoginCtrl {
 
-  public title:string = "Login Panel";
+    public title: string = "Login Panel";
 
-  // @ngInject
-  constructor(private $filter:ng.IFilterService,
-              private $state:ng.ui.IStateService,
-              private fooBar:FooBar) {
-    console.log("Angular Dependency Injection Example");
-    console.log($filter, $state);
-  }
+    // @ngInject
+    constructor(private $filter: ng.IFilterService,
+        private $state: ng.ui.IStateService,
+        private fooBar: FooBar) {
 
-  public fooBarTitle(title:string):string {
-    const prefix:string = this.fooBar.testMethod();
-    return `${prefix}: ${title}`;
-  }
+        this.title = $filter("uppercase")(this.title);
+    }
+
+    public fooBarTitle(title: string): string {
+        const prefix: string = this.fooBar.testMethod();
+        return `${prefix}: ${title}`;
+    }
 }

@@ -10,20 +10,20 @@ import {
     ContactService
 }
 from "./ContactService";
+import {
+    HttpService
+}
+from "../../services/HttpService";
+import {
+    Routes
+}
+from "./Routes";
 
-const module: ng.IModule = App.module("app.contact", ["app.services"]);
+const module: ng.IModule = App.module("app.contact", []);
 
+module.service("httpService", HttpService);
 module.service("contactService", ContactService);
 module.component("formulaire", FormulaireComponent);
 
 // @ngInject
-module.config(($stateProvider: angular.ui.IStateProvider) => {
-    $stateProvider.state("contact", {
-        url: "/contact",
-        views: {
-            application: {
-                templateUrl: "src/module/contact/view/contact.html"
-            }
-        }
-    });
-});
+module.config(Routes);

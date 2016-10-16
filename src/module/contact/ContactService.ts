@@ -3,20 +3,23 @@ import {
 }
 from "../../services/HttpService";
 
+import {
+    IService
+}
+from "../../services/IService";
+
 import IPromise = angular.IPromise;
 
-export class ContactService extends HttpService {
+export class ContactService implements IService {
+    moduleName: string = "stories";
+
     // @ngInject
-    constructor($http: ng.IHttpService) {
-
-        super($http);
-
-        this.moduleName = "stories";
+    constructor(private httpService: HttpService) {
+        this.httpService.moduleName = this.moduleName;
     }
 
-    public getAll(): IPromise < any > {
-        var config: any = {};
-        return this.useGetHandler(config);
+    public retournerTous(): IPromise < any > {
+        return this.httpService.obtenir({});
     }
 }
 
